@@ -72,7 +72,6 @@ async function onClickMoreImg() {
 
 export { perPage, page, nameImg };
 
-
 // window.addEventListener('scroll', () => {
 //   const documentRect = document.documentElement.getBoundingClientRect();
 //   // console.log('top', documentRect.top);
@@ -85,7 +84,6 @@ export { perPage, page, nameImg };
     
 //   }
 // })
-
 
 const options = {
   rootMargin: '100px',
