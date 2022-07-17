@@ -5,8 +5,9 @@ import { getRefs } from './js/refs';
 import { renderMarkup } from './js/renderCard';
 import { fetchImages } from './js/fetchImages';
 import { noMorePages } from './js/end';
+// import * as btn from './js/btn_up';
 
-const { formElement, galleryElement, btnElement, textElement } = getRefs();
+const { formElement, galleryElement, textElement, btnUpElement } = getRefs();
 
 let page = null;
 let nameImg = '';
@@ -105,3 +106,24 @@ const observer = new IntersectionObserver(entries => {
 }, options);
 
 observer.observe(document.querySelector('.scroll-guard'));
+
+
+
+// Кнопка UP
+
+btnUpElement.addEventListener('click', onClickBtnUp)
+
+function onClickBtnUp () {
+  galleryElement.scrollIntoView({block: "start", behavior: "smooth"})
+}
+
+window.addEventListener('scroll', sizeScrol)
+
+function sizeScrol () {
+  if(scrollY > 400) {
+    btnUpElement.classList.remove('is-hidden')
+  } else {
+    btnUpElement.classList.add('is-hidden')
+  }
+}
+

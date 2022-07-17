@@ -1,0 +1,22 @@
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background: rgb(226, 245, 104);
+    opacity: 0.5;
+
+    &:hover{opacity: 1}
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+};
+
+.is-hidden{
+    visibility: hidden;
+}
